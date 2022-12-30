@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="modal" id="modal">
+        <div class="modal-container">
+            <h2 class="modal-title">jonni galindo</h2>
+            <a href="#" class="modal_close"></a>
+        </div>
+    </section>
+
+    <a href="#modal" class="open">abrir</a>
+
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .open{
+            color: white;
+            text-decoration: none;
+            padding: 15px 50px;
+            border-radius: 2em;
+            background-color: green;
+        }
+
+        .modal{
+            width: 100%;
+            position: fixed;
+            inset: 0;
+            background:#0000005d;
+            display: flex;
+            transition: transform 1.5s;
+            transform: translate(100%);
+        }
+
+        .modal:target{
+            transform: translate(0);
+        }
+
+        .modal-container{
+            position: relative;
+            width: 80%;
+            height: 60%;
+            background-color: white;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal_title{
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        .modal_close{
+            position:absolute;
+            background-color: red;
+            top: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</body>
+</html>
